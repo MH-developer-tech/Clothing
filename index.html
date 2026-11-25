@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sasti Hut | Fashion Store</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf9f5;
+    color: #171717;
+}
+
+.topbar {
+    background: #c9a227;
+    color: #111;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+header {
+    background: #10100e;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #d3ad55;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #d3ad55;
+}
+
+.hero {
+    min-height: 570px;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.15)),
+    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=85");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero small {
+    color: #e4c77e;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(45px, 7vw, 78px);
+    margin: 22px 0;
+}
+
+.hero h1 span {
+    color: #e4c77e;
+}
+
+.hero p {
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.btn {
+    display: inline-block;
+    background: #c9a227;
+    color: #111;
+    padding: 15px 25px;
+    margin-top: 25px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 75px 7%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading small {
+    color: #a17d27;
+    letter-spacing: 3px;
+}
+
+.heading h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-top: 12px;
+}
+
+.categories, .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category {
+    position: relative;
+    height: 290px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.category:hover img {
+    transform: scale(1.08);
+}
+
+.category h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    text-shadow: 0 2px 8px #000;
+}
+
+.product {
+    background: white;
+    padding-bottom: 20px;
+}
+
+.product img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+
+.product h3, .product p {
+    margin: 12px 15px;
+}
+
+.product h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.price {
+    color: #9b7623;
+    font-weight: bold;
+}
+
+.promise {
+    background: #11110f;
+    color: white;
+    text-align: center;
+}
+
+.promise h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.promise p {
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #666;
+    line-height: 1.9;
+}
+
+.contact {
+    background: #eee9dd;
+    text-align: center;
+}
+
+footer {
+    background: #10100e;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer span {
+    color: #d3ad55;
+}
+
+@media(max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .categories, .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 480px) {
+    .categories, .products {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .category {
+        height: 210px;
+    }
+
+    .product img {
+        height: 220px;
+    }
+
+    section {
+        padding: 55px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    NATIONWIDE DELIVERY ACROSS PAKISTAN
+</div>
+
+<header>
+    <div class="logo">SASTI <span>HUT.</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <small>THE NEW SEASON COLLECTION</small>
+        <h1>Good Style.<br><span>Better Prices.</span></h1>
+        <p>
+            Discover everyday fashion and beautiful essentials
+            made for your style and your budget.
+        </p>
+        <a href="#shop" class="btn">EXPLORE COLLECTION →</a>
+    </div>
+</div>
+
+<section id="categories">
+    <div class="heading">
+        <small>FIND YOUR LOOK</small>
+        <h2>Shop By Category</h2>
+    </div>
+
+    <div class="categories">
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Women Fashion">
+            <h3>Women</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=800&q=80" alt="Men Fashion">
+            <h3>Men</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Bags">
+            <h3>Bags</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80" alt="Shoes">
+            <h3>Shoes</h3>
+        </div>
+    </div>
+</section>
+
+<div class="promise">
+    <section>
+        <h2>Luxury Feel. Affordable Prices.</h2>
+        <p>
+            Great fashion should be accessible to everyone.
+            Shop your favourite styles without spending a fortune.
+        </p>
+    </section>
+</div>
+
+<section id="shop">
+    <div class="heading">
+        <small>HANDPICKED FOR YOU</small>
+        <h2>Featured Collection</h2>
+    </div>
+
+    <div class="products">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80" alt="Women's Outfit">
+            <h3>Everyday Elegance</h3>
+            <p class="price">Rs. 2,499</p>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80" alt="Modern Fashion">
+            <h3>Modern Classic</h3>
+            <p class="price">Rs. 2,850</p>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=80" alt="Men's Shirt">
+            <h3>Daily Essential</h3>
+            <p class="price">Rs. 1,199</p>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80" alt="Handbag">
+            <h3>Classic Carryall</h3>
+            <p class="price">Rs. 1,999</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Fashion Store">
+
+    <div>
+        <h2>Welcome To Sasti Hut</h2>
+        <p>
+            Sasti Hut is all about bringing you stylish,
+            affordable and quality products.
+            Discover your favourite fashion and everyday
+            essentials in one place.
+        </p>
+        <a href="#contact" class="btn">CONTACT US</a>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="heading">
+        <small>WE ARE HERE FOR YOU</small>
+        <h2>Let's Connect</h2>
+        <p>Have a question? Get in touch with Sasti Hut.</p>
+        <a href="mailto:sastihut@gmail.com" class="btn">EMAIL US</a>
+    </div>
+</section>
+
+<footer>
+    <div class="logo">SASTI <span>HUT.</span></div>
+    <p style="margin-top:15px;">Good Style. Better Prices.</p>
+    <p style="margin-top:20px;color:#999;font-size:12px;">
+        © 2022 Sasti Hut. All Rights Reserved.
+    </p>
+</footer>
+
+</body>
+</html>
